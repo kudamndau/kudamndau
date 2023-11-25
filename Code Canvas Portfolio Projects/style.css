@@ -662,7 +662,56 @@ color: #fff;
 
 /* End of Footer Section */
 
+/* Portfolio Portal Page */
 
+/* Sub-Header */
+
+#sub-header {
+  background-image: url(img-1.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+#sub-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+#sub-header {
+  height: 80vh;
+}
+
+.sub-header .container {
+  height: 100%;
+}
+
+#sub-header .sub-header .section-title {
+  color: #fff;
+}
+
+#toc .timeline-container {
+  display: grid;
+  grid-template-columns: 3px 1fr;
+}
+
+#toc .timeline-container .middle-line {
+  height: auto;
+  background-color: crimson;
+}
+/* End of Sub Header */
+
+/* Table of Contents */
+
+/* End of Table of Contents */
 
 /* Keyframes */
 
