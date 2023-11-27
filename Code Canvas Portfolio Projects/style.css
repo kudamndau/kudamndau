@@ -69,6 +69,7 @@ p {
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  cursor: pointer;
   margin-top: 30px;
   transition: 1s ease;
   transition-property: background-color;
@@ -699,6 +700,53 @@ color: #fff;
 }
 /* End of Sub Header */
 
+/* Introduction */
+#introduction .introduction {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+#introduction .intro-header {
+  width: 90%; 
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#introduction .intro-header h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#introduction .intro {
+  width: 90%;
+}
+
+#introduction .intro-card {
+  width: 100%;
+  background-color: #29323c;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#introduction .intro-card h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#introduction .intro-card p {
+  color: #fff;
+}
+
+/* End of Introduction */
+
 /* Table of Contents */
 
 #toc {
@@ -750,6 +798,7 @@ color: #fff;
   flex-direction: column;
   position: relative;
   padding-left: 5px;
+  box-sizing: border-box;
 }
 
 #toc .timestamp {
@@ -766,7 +815,7 @@ color: #fff;
   text-align: left;
 }
 
-#toc .timestamp::after {
+#toc .timeline-items::after {
   content: '';
   position: absolute;
   top: 50px;
@@ -778,7 +827,7 @@ color: #fff;
   rgba(47, 47, 49));
   border: 5px solid crimson;
   border-radius: 50%;
-  margin-left: -45px;
+  margin-left: -10px;
   z-index: 1;
 }
 
@@ -795,6 +844,9 @@ color: #fff;
 
 #toc .cta {
   color: black;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  width: 42%;
 }
 
 #toc .timeline-item-description {
@@ -808,6 +860,8 @@ color: #fff;
   border: none;
   border-radius: 10px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
  }
 
  #toc .timeline-item-description h2 {
@@ -815,8 +869,162 @@ color: #fff;
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 10px;
-}
+} 
 /* End of Table of Contents */
+
+/* Portfolio Projects Section */
+
+#project .project {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+#project .project-header {
+  padding: 20px 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#project .projects {
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+#project .project-carousel-container {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 5%;
+}
+
+#project .project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  box-shadow: 0 0 0 #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 50px;
+}
+
+#project .project-card-header {
+  margin-bottom: 20px;
+}
+
+#project .project-card-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#project .project-card-header h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#project .project-card-header h1 span {
+  color: crimson;
+}
+
+#project .project-card-media {
+  width: 100%;
+  height: auto;
+  border: 1px solid #29323c;
+  
+  margin-bottom: 20px;
+}
+
+#project .project-card-info {
+  background-color: #29323c;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#project .project-card-info h3 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+
+#project .project-card-info p {
+  color: #fff;
+}
+
+#project .project-description,
+#project .project-notes, 
+#project .project-features,
+#project .project-call-to-action {
+  margin-bottom: 20px;
+}
+ 
+#project .project-features ul {
+  list-style: none;
+  font-size: 1.35rem;
+  margin-left: 30px;
+}
+
+#project .project-features ul li {
+  margin-bottom: 10px;
+}
+
+#project .project-notes span {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+#project .project-call-to-action {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#project .project-card-info .cta {
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  margin: 0;
+}
+
+#project .project-card-info .project-cta {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 16px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #757575;
+  border: 2px solid #757373;
+  cursor: pointer;
+}
+
+#project .project-carousel {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateY(-50%);
+  background-color: #29323c;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#project .prevbtn {
+  left: 20%;
+}
+
+#project .nextbtn {
+  right: 30.5%;
+}
+
+/* End of Portfolio Projects Section */
 
 /* Keyframes */
 
@@ -965,6 +1173,27 @@ color: #fff;
   /* End of Contact */
 
   /* Portfolio Portal Page */
+
+  /* Introduction */
+
+  #introduction .intro-header h2 {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+  }
+  
+  #introduction .intro-card {
+    margin-bottom: 50px;
+    padding: 25px;
+  }
+  
+  #introduction .intro-card h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  /* End of Introduction */
+  
   /* Table of Contents */
   #toc .timeline::after {
     width: 10px;
@@ -977,10 +1206,10 @@ color: #fff;
     margin-left: 50px;
   }
   
-  #toc .timestamp::after {
+  #toc .timeline-items::after {
     height: 30px;
     width: 30px;
-    margin-left: -65px;
+    margin-left: -15px;
   }
   
   #toc .timestamp time {
@@ -999,6 +1228,84 @@ color: #fff;
   }
   
   /* Table of Contents */
+
+  /* Portfolio Projects Section */
+#project .project-header {
+  padding: 20px 30px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+#project .project-card {
+  margin-bottom: 70px;
+}
+
+#project .project-card-header {
+  margin-bottom: 40px;
+}
+
+#project .project-card-header h2 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+}
+
+#project .project-card-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+}
+
+#project .project-card-media {
+  margin-bottom: 70px;
+}
+
+#project .project-card-info {
+  padding: 30px;
+}
+
+#project .project-card-info h3 {
+  font-size: 2.8rem;
+  margin: 30px 0;
+}
+
+#project .project-description,
+#project .project-notes, 
+#project .project-features,
+#project .project-call-to-action {
+  margin-bottom: 40px;
+}
+ 
+#project .project-features ul {
+  list-style: none;
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+
+#project .project-features ul li {
+  margin-bottom: 25px;
+}
+
+#project .project-notes span {
+  font-size: 1.35rem;
+}
+
+#project .project-card-info .cta {
+  font-size: 2.3rem;
+  margin-right: 30px;
+}
+
+#project .project-card-info .project-cta {
+  font-size: 2.0rem;
+}
+
+#project .prevbtn {
+  left: 35%;
+}
+
+#project .nextbtn {
+  right: 38.5%;
+}
+
+/* End of Portfolio Projects Section */
 
 }
 
@@ -1039,38 +1346,128 @@ color: #fff;
     margin-top: 25px;
   }
 
+  /* Introduction */
+  #introduction .intro-header {
+    width: 75%;
+  }
+
+  #introduction .intro-header h2 {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+  }
+  
+  #introduction .intro {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #introduction .intro-card {
+    margin:0 25px 50px;
+    padding: 25px;
+  }
+  
+  #introduction .intro-card h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  /* End of Introduction */
+  
   /* Table of Contents */
-#toc .timeline::after {
-  left: 50%;
+  #toc .timeline {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #toc .timeline .timeline-items {
+    width: 45%;
+    padding: 0;
+  }
+
+  #toc .timeline .left {
+    padding-right: 50px;
+    left: 0;
+  }
+
+  #toc .timeline .right {
+    padding-left: 50px;
+    left: 50%;
+  }
+
+  #toc .timeline::after {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 12px;
+    margin: 0;
+  }
+
+  #toc .timestamp {
+    width: 60%;
+  }
+
+  #toc .timeline .left .timestamp {
+    text-align: right; 
+    margin-left: auto;
+  }
+
+  #toc .timeline-items::after {
+    height: 40px;
+    width: 40px; 
+  }
+
+  #toc .timeline .left::after {
+    margin: 0;
+    margin-left: 108%;
+  }
+
+  #toc .timeline .right::after {
+    margin-left: -4%;
+  }
+
+  #toc .timeline-item-description {
+    width: 100%;
+  }
+
+  #toc .timeline .right .timestamp {
+    margin-left: 25px;
+    text-align: left;
+  }
+
+  #toc .timeline .left .timeline-item-description {
+    margin-right: 25px;
+    margin-left: 10px;
+    text-align: right;
+  }
+
+  #toc .timeline .right .timeline-item-description {
+    margin-left: 25px;
+    margin-right: 10px;
+    text-align: left;
+  }
+  /* Table of Contents */
+  /* Portfolio Projects Section */
+
+#project .project-header {
+ width: 75%;
 }
 
-#toc .timestamp {
-  width: 25%;
+#project .prevbtn {
+  left: 40%;
 }
 
-#toc .timestamp::after {
-  height: 30px;
-  width: 30px;
-  margin: 0;
-  margin-left: 186%;
+#project .nextbtn {
+  right: 43.5%;
 }
 
-#toc .timeline-item-description {
-  width: 50%;
-}
-
-#toc .timeline:nth-child(odd) {
-  text-align: right;
-}
-
-#toc .timeline-items:nth-child(even) {
+#toc .timeline .left .cta {
   align-self: flex-end;
-  margin-left: auto;
-  text-align: left;
 }
 
+/* End of Portfolio Projects Section */
 
-  /* Table of Contents */
+  /* End of Portfolio Projects*/
 }
 
 /* End of Media Query for Desktop */ 

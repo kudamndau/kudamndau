@@ -23,3 +23,37 @@ menu_item.forEach((item) => {
     mobile_menu.classList.toggle('active');
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".project-carousel-container");
+  const prevBtn = document.getElementById("prvBtn");
+  const nextBtn = document.getElementById("nxtBtn");
+
+  let currentIndex = 0;
+
+  prevBtn.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+      scrollSectionToTop();
+    }
+  });
+
+  nextBtn.addEventListener("click", function () {
+    if (currentIndex < container.children.length - 1) {
+      currentIndex++;
+      updateCarousel();
+      scrollSectionToTop();
+    }
+  });
+
+  function updateCarousel() {
+    const translateValue = -currentIndex * 100 + "%";
+    container.style.transform = "translateX(" + translateValue + ")";
+  }
+
+  function scrollSectionToTop() {
+    container.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
