@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+p {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: crimson;
+}
+
+.brand h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.brand h1 span {
+  color: crimson;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 1s ease;
+  transition-property: background-color;
+}
+
+.cta:hover {
+  background-color: crimson;
+}
+
+.icon {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 2px solid crimson;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.icon i {
+  font-size: 4rem;
+  color: crimson;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Header */
+#header {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+}
+
+#header .header {
+  min-height: 8vh;
+  background-color: rgba(31, 30, 30, 0.24);
+  transition: 0.5s ease background-color;
+}
+
+#header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
+}
+
+#header .nav-list ul {
+  list-style: none;
+  position: absolute;
+  background-color: rgb(31, 30, 30);
+  width: 100vw;
+  height: 100vh;
+  left: 100%; 
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s ease left;
+}
+
+#header .nav-list ul.active {
+  left: 0;
+}
+
+#header .nav-list ul a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+}
+
+#header .nav-list ul a::after {
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgba(240, 248, 255, 0.021);
+  font-size: 10rem;
+  letter-spacing: 50px;
+  z-index: -1;
+  transition: 0.3s ease letter-spacing;
+}
+
+#header .nav-list ul li:hover a::after {
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+
+#header .nav-list ul li:hover a {
+  color: crimson;
+}
+
+#header .hamburger {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(0.5);
+  margin-right: 10px;
+}
+
+#header .hamburger::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  animation: hamburger_pulse 1s ease infinite;
+
+}
+
+#header .hamburger .bar {
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: #fff;
+  z-index: -1;
+}
+
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  transition: 0.5s ease;
+  transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after {
+  top: 8px;
+}
+
+#header .hamburger .bar::before {
+  bottom: 8px;
+}
+
+#header .hamburger.active .bar::after{
+  top: 0;
+}
+
+#header .hamburger.active .bar::before {
+  bottom: 0;
+}
+/* End of Header */
+
+/* Sub-Header */
+
+#sub-header {
+  background-image: url(img-1.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+#sub-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+#sub-header {
+  height: 80vh;
+}
+
+.sub-header .container {
+  height: 100%;
+}
+
+#sub-header .sub-header .section-title {
+  color: #fff;
+}
+/* End of Sub Header */
+
+/* Introduction */
+#introduction .introduction {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+#introduction .intro-header {
+  width: 90%; 
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#introduction .intro-header h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#introduction .intro {
+  width: 90%;
+}
+
+#introduction .intro-card {
+  width: 100%;
+  background-color: #29323c;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#introduction .intro-card h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#introduction .intro-card p {
+  color: #fff;
+}
+
+/* End of Introduction */
+
+/* Portfolio Projects Section */
+
+#portfolio .portfolio {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+#portfolio .portfolio-header {
+  padding: 20px 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#portfolio .portfolios {
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+#portfolio .portfolio-carousel-container {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 5%;
+}
+
+#portfolio .portfolio-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  box-shadow: 0 0 0 #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 50px;
+}
+
+#portfolio .portfolio-card-header {
+  margin-bottom: 20px;
+}
+
+#portfolio .portfolio-card-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#portfolio .portfolio-card-header h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#portfolio .portfolio-card-header h1 span {
+  color: crimson;
+}
+
+#portfolio .portfolio-card-media {
+  width: 100%;
+  height: auto;
+  border: 1px solid #29323c;
+  
+  margin-bottom: 20px;
+}
+
+#portfolio .portfolio-card-info {
+  background-color: #29323c;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#portfolio .portfolio-card-info h3 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+
+#portfolio .portfolio-card-info p {
+  color: #fff;
+}
+
+#portfolio .portfolio-description,
+#portfolio .portfolio-notes, 
+#portfolio .portfolio-features,
+#portfolio .portfolio-call-to-action {
+  margin-bottom: 20px;
+}
+ 
+#portfolio .portfolio-features ul {
+  list-style: none;
+  font-size: 1.35rem;
+  margin-left: 30px;
+}
+
+#portfolio .portfolio-features ul li {
+  margin-bottom: 10px;
+}
+
+#portfolio .portfolio-notes span {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+#portfolio .portfolio-call-to-action {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#portfolio .portfolio-card-info .cta {
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  margin: 0;
+}
+
+#portfolio .portfolio-card-info .portfolio-cta {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 16px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #757575;
+  border: 2px solid #757373;
+  cursor: pointer;
+}
+
+#portfolio .portfolio-carousel {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateY(-50%);
+  background-color: #29323c;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#portfolio .prevbtn {
+  left: 20%;
+}
+
+#portfolio .nextbtn {
+  right: 30.5%;
+}
+
+/* End of Portfolio Projects Section */
+
+/* Contact Section */
+
+#contact .container {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+#contact .contact-items-header {
+  width: 75%;
+  margin: 5px auto 20px;
+  text-align: center;
+}
+
+#contact .contact-items-container {
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contact-items {
+  width: 400px;
+}
+
+#contact .contact-item {
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 18px 0 #0000002c;
+  transition: 0.5s ease box-shadow;
+}
+
+#contact .contact-item:hover {
+  box-shadow: 0px 0px 5px 0 #0000002c; 
+}
+#contact .contact-info h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#contact .contact-info h2 {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+/* End of Contact Section */
+
+/* Footer Section */
+
+#footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+#footer .footer {
+ min-height: 200px;
+ flex-direction: column;
+ padding-top: 50px;
+ padding-bottom: 10px;
+}
+
+#footer .footer .social-item .social-icon i {
+  font-size: 2.5rem;
+  color: crimson;
+  margin: auto;
+  transition: 0.5s ease filter;
+}
+
+#footer .footer .social-item .social-icon i:hover {
+  filter: grayscale(1);
+}
+
+#footer .footer .social-item {
+  height: 40px;
+  max-width: 40%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+#footer .footer .social-icon {
+  height: 100%;
+  width: 40px;
+  margin: 0 5px 20px 5px;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  border: 2px solid crimson;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer h1{
+  text-align: center;
+}
+
+#footer h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#footer .brand p {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+}
+
+#footer p {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+/* End of Footer Section */
+
+/* Keyframes */
+
+@keyframes hamburger_pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+@media only screen and (min-width:768px) {
+ 
+  .cta {
+  font-size: 2.5rem;
+  padding: 20px 60px;
+ } 
+ 
+ h1.section-title {
+  font-size: 6rem;
+ }
+
+  /* Introduction */
+
+  #introduction .intro-header h2 {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+  }
+  
+  #introduction .intro-card {
+    margin-bottom: 50px;
+    padding: 25px;
+  }
+  
+  #introduction .intro-card h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  /* End of Introduction */
+
+  /* Portfolios Section */
+  #portfolio .portfolio-header {
+    padding: 20px 30px;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  #portfolio .portfolio-card {
+    margin-bottom: 70px;
+  }
+
+  #portfolio .portfolio-card-header {
+    margin-bottom: 40px;
+  }
+
+  #portfolio .portfolio-card-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+
+  #portfolio .portfolio-card-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+  }
+
+  #portfolio .portfolio-card-media {
+    margin-bottom: 70px;
+  }
+
+  #portfolio .portfolio-card-info {
+    padding: 30px;
+  }
+
+  #portfolio .portfolio-card-info h3 {
+    font-size: 2.8rem;
+    margin: 30px 0;
+  }
+
+  #portfolio .portfolio-description,
+  #portfolio .portfolio-notes, 
+  #portfolio .portfolio-features,
+  #portfolio .portfolio-call-to-action {
+    margin-bottom: 40px;
+  }
+  
+  #portfolio .portfolio-features ul {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-left: 30px;
+  }
+
+  #portfolio .portfolio-features ul li {
+    margin-bottom: 25px;
+  }
+
+  #portfolio .portfolio-notes span {
+    font-size: 1.35rem;
+  }
+
+  #portfolio .portfolio-card-info .cta {
+    font-size: 2.3rem;
+    margin-right: 30px;
+  }
+
+  #portfolio .portfolio-card-info .project-cta {
+    font-size: 2.0rem;
+  }
+
+  #portfolio .prevbtn {
+    left: 35%;
+  }
+
+  #portfolio .nextbtn {
+    right: 38.5%;
+  }
+
+  /* End of Portfolio Projects Section */
+
+   /* Contact */
+
+#contact .contact-items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#contact .contact-item {
+  flex-basis: 31%;
+  margin: 5px;
+  padding: 30px 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#contact .contact-item .icon {
+  margin-left: 15px;
+}
+
+#contact .contact-item .contact-info {
+  padding-left: 20px;
+  text-align: left;
+  width: 100%;
+}
+/* End of Contact */
+}
+
+/* End of Media Query for Tablet */
+
+/* Media Query for Desktop */
+@media only screen and (min-width: 1200px) {
+  #header .hamburger {
+    display: none;
+  }
+
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+
+  #header .nav-list ul li {
+    display: inline-block;
+  }
+
+  #header .nav-list ul li a {
+    font-size: 1.8rem;
+  }
+
+  #header .nav-list ul a::after {
+    display: none;
+  }
+
+  /* Introduction */
+  #introduction .intro-header {
+    width: 75%;
+  }
+
+  #introduction .intro-header h2 {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+  }
+  
+  #introduction .intro {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #introduction .intro-card {
+    margin:0 25px 50px;
+    padding: 25px;
+  }
+  
+  #introduction .intro-card h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  /* End of Introduction */
+  
+  /* Portfolios Section */
+
+#project .project-header {
+ width: 75%;
+}
+
+#project .prevbtn {
+  left: 40%;
+}
+
+#project .nextbtn {
+  right: 43.5%;
+}
+ /* End of Portfolio Projects*/
+}
+
+/* End of Media Query for Desktop */ 
