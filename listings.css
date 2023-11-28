@@ -324,7 +324,7 @@ p {
 
 /* End of Introduction */
 
-/* Portfolio Projects Section */
+/* Portfolios Section */
 
 #portfolio .portfolio {
   flex-direction: column;
@@ -459,9 +459,9 @@ p {
   bottom: 10px;
   left: 50%;
   transform: translateY(-50%);
-  background-color: #29323c;
+  background-color: transparent;
   border-radius: 10px;
-  color: #fff;
+  color: transparent;
   border: none;
   padding: 10px 15px;
   margin: 0 auto;
