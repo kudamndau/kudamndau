@@ -1,0 +1,63 @@
+@media only screen and (max-width: 400px) {
+  * {
+    font-size: 9px;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h5 {
+   font-size: 14px; 
+  }
+
+  section, 
+  header, 
+  footer,
+  nav,
+  #hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  div {
+    width: 100%;
+    
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 750px) {
+  * {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h5 {
+   font-size: 20px; 
+  }
+
+  section, 
+  header, 
+  footer,
+  nav,
+  #hero
+  #service-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero1 {
+    width: 100%;
+  }
+
+  div {
+    width: 100%;
+    
+  }
+}

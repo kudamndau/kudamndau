@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Eduford|Course</title>
+</head>
+<body>
+  <section class="sub-header">
+    <nav>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Eduford logo">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li>
+            <a href="main.html">
+              HOME
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a href="course.html">
+              COURSE
+            </a>
+          </li>
+          <li>
+            <a href="blog.html">
+              BLOG
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              CONTACT
+            </a>
+            <li>
+              <a href="index.html">
+                FEEDBACK
+              </a>
+            </li>
+          </li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+      <h1>
+        Our Courses
+      </h1>
+  </section>
+
+  <!-- Course -->
+  <section class="course">
+    <h1>Courses We Offer</h1>
+    <p>
+      Embark on a transformative educational journey with Eduford as we offer a diverse array of courses  
+      designed to enrich your knowledge<br> and ignite your passion. From cutting-edge technology to the intricacies 
+      of business and beyond,  our carefully curated selection <br>ensures a comprehensive learning experience tailored 
+      to your ambitions.
+    </p>
+
+    <div class="row">
+      <div class="course-col">
+        <h3>Certificate Programmes</h3>
+        <p>
+          Unlock specialized skills and certifications through our Certificate Programs, 
+          providing focused training in areas like Web Development, Digital Marketing, and 
+          Data Analytics.
+        </p>
+      </div>
+
+      <div class="course-col">
+        <h3>Undergraduate Degrees</h3>
+        <p>
+          Pursue your academic journey with our Undergraduate Degrees, offering a foundation 
+          in fields such as Business Administration, Computer Science, and Environmental Science.
+        </p>
+      </div>
+
+      <div class="course-col">
+        <h3>Post-Graduaate Studies</h3>
+        <p>
+          Elevate your expertise with our Postgraduate Programs, offering advanced studies in areas 
+          like MBA, Artificial Intelligence, and Biotechnology, empowering you for leadership roles in your
+          chosen field
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!--------- Facilities --------->
+  <section class="facilities">
+   <h1>Our Facities</h1> 
+   <p>
+    Our state-of-the-art infrastructure provides cutting-edge laboratories, modern classrooms, and collaborative spaces, <br> 
+    ensuring an optimal environment for innovation and academic growth.
+  </p>
+
+  <div class="row">
+    <div class="facilities-col">
+      <img src="images/library.png" alt="Edford University Student's Library">
+      <h3>World Class Library</h3>
+      <p>
+        Immerse yourself in knowledge at our World Class Library. Featuring an extensive collection of resources, digital archives, 
+        and serene study spaces, it serves as a beacon for intellectual exploration and academic excellence.
+      </p>
+    </div>
+
+    <div class="facilities-col">
+      <img src="images/basketball.png" alt="Edford University Student's playing basketball in the gym">
+      <h3>Largest Sports Field</h3>
+      <p>
+        Experience the thrill of athletics on our Largest Sports Fields. From expansive soccer pitches to well-maintained courts, our 
+        sporting facilities provide the perfect arena for physical fitness, team spirit, and a vibrant sporting culture.
+      </p>
+    </div>
+
+    <div class="facilities-col">
+      <img src="images/cafeteria.png" alt="Edford University Student's cafeteria">
+      <h3>Tasty and Healthy Food</h3>
+      <p>
+        Indulge in a delightful culinary experience at our cafeteria—where taste meets health. Our food hub offers a diverse menu of 
+        nutritious and delicious options, 
+        ensuring a satisfying blend of flavors for a well-rounded and energizing dining experience.
+      </p>
+    </div>
+  </div>
+  </section>
+
+  <!------ Footer ----->
+  <sectiion class="footer">
+    <h4>About Us</h4>
+    <p>
+      Discover the essence of Eduford &dash; a beacon of educational excellence committed to nurturing global leaders. <br> 
+      Our mission is to provide transformative learning experiences, empowering individuals to thrive in an ever-evolving 
+      world.
+    </p>
+
+    <div class="icons"> 
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
+    <p>Made By K.M. &copy;2023</p>
+  </sectiion>
+
+  <!-- JavaScript for Toggle Menu -->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+
+  </script>
+</body>
+</html>
